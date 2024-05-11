@@ -1,0 +1,15 @@
+{
+  "name": "open-local-chat-server",
+  "version": "0.0.1",
+  "description": "Key distribution center for Open Local Chat",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node server.ts"
+  },
+  "author": "pinomo / pinomo1 et al.",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
