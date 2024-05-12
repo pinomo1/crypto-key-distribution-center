@@ -77,6 +77,7 @@ const httpServer = createServer(function(req,res){
                 publicKey = json.publicKey;
                 token = json.token;
                 tokenKeys.set(token, publicKey);
+                console.log("New token: " + token + " with public key: " + publicKey);
                 res.writeHead(200, headers);
                 res.end(JSON.stringify({}));
             }
@@ -127,6 +128,8 @@ const httpServer = createServer(function(req,res){
                     encryptedA: encryptedA,
                     encryptedB: encryptedB
                 }
+
+                console.log("Session key: " + caesar.key + " for token: " + token);
 
                 res.writeHead(200, headers);
                 res.end(JSON.stringify(response));
